@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown List</title>
+</head>
+<body>
+    <select id="dropdown">
+        <!-- Options will be dynamically added here -->
+    </select>
+
+    <script>
+        var list = [
+            {
+                id: 0,
+                l: 0,
+                d: "description"
+            },
+            {
+                id: 1,
+                l: 1,
+                d: "description"
+            },
+            {
+                id: 2,
+                l: 2,
+                d: "description"
+            }
+        ];
+
+        // Get the dropdown element
+        var dropdown = document.getElementById('dropdown');
+
+        // Filter options with l value greater than 0
+        var filteredList = list.filter(item => item.l > 0);
+
+        // Create options from the filtered list
+        filteredList.forEach(item => {
+            var option = document.createElement('option');
+            option.value = item.id;
+            option.textContent = item.d;
+            dropdown.appendChild(option);
+        });
+    </script>
+</body>
+</html>
