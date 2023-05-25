@@ -7,15 +7,26 @@
     <title>Document</title>
     <script>
         /**
-         * 
-         * 
+         * asl/psl Active/Passive skill list
+         * st status
+         * lv level
+         * mpc Mana Point Cost
+         * coo Cooldown
+         * ran Range
+         * cas Casting Speed
+         * dap Physical Damage
+         * dam Magical Damage
+         * req Level Requirement
+         * sp Skill Point Consumtion
+         * act Action - Active Skill if true (1) & passive Skill if false (0)
         */
-        var aj = [{
+        var asl = [{
                 id : 31,
                 name : "Crash Blow",
                 icon : "./i/Crash_blow.webp",
                 job : "Fighter",
-                type : "Active",
+                act : 1,
+                tag : ["Two-Handed","Single"],
                 desc : "Lifts Two-handed Weapon and smashes down the target to deal X damage. Requires a Two Handed Weapon. This skill is a Single Target attack.",
                 st : [{
                     lv : 1,
@@ -123,8 +134,8 @@
                 name: "Uppercut",
                 icon : "./i/Uppercut.webp",
                 job : "Fighter",
-                type : "Active",
-                weap : "Two-Handed",
+                act : 1,
+                tag : ["Two-Handed","Single"],
                 desc : "Attacks enemies with a speedy uppercut.",
                 st : [{
                     lv : 1,
@@ -150,7 +161,7 @@
             }];
         
         
-        var pj = [
+        var psl = [
                 {
                 id: 01,
                 job : "Paladin",
