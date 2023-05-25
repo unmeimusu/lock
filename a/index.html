@@ -4,45 +4,248 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dropdown List</title>
+    <title>Document</title>
 </head>
 <body>
-    <select id="dropdown">
-        <!-- Options will be dynamically added here -->
-    </select>
-
     <script>
-        var list = [
+        var pj = [
             {
-                id: 0124,
-                l: 0,
-                d: "description1"
+            id: 01,
+            jo: "pa",
+            st: [{
+                lv : 1,
+                pd : 0.01,
+                pa : 0,
+                md : 0,
+                ma : 0,
+                cd : 0,
+                cr : 0
             },
             {
-                id: 112321,
-                l: 1,
-                d: "description2"
+                lv : 2,
+                pd : 0.03,
+                pa : 0,
+                md : 0,
+                ma : 0,
+                cd : 0,
+                cr : 0,
             },
             {
-                id: 24214,
-                l: 2,
-                d: "description3"
-            }
-        ];
-
-        // Get the dropdown element
-        var dropdown = document.getElementById('dropdown');
-
-        // Filter options with l value greater than 0
-        var filteredList = list.filter(item => item.l > 0);
-
-        // Create options from the filtered list
-        filteredList.forEach(item => {
-            var option = document.createElement('option');
-            option.value = item.id;
-            option.textContent = item.d;
-            dropdown.appendChild(option);
-        });
+                lv : 3,
+                pd : 0.08,
+                pa : 0,
+                md : 0,
+                ma : 0,
+                cd : 0,
+                cr : 0,
+            },
+            {
+                lv : 4,
+                pd : 0.15,
+                pa : 0,
+                md : 0,
+                ma : 0,
+                cd : 0,
+                cr : 0,
+            }]
+            }, 
+            {
+            id: 02,
+            jo: "sw",
+            st: [{
+                lv : 1,
+                pd : 0,
+                pa : 0.01,
+                md : 0,
+                ma : 0,
+                cd : 0,
+                cr : 0
+            },
+            {
+                lv : 2,
+                pd : 0,
+                pa : 0.03,
+                md : 0,
+                ma : 0,
+                cd : 0,
+                cr : 0,
+            },
+            {
+                lv : 3,
+                pd : 0,
+                pa : 0.08,
+                md : 0,
+                ma : 0,
+                cd : 0,
+                cr : 0,
+            },
+            {
+                lv : 4,
+                pd : 0,
+                pa : 0.15,
+                md : 0,
+                ma : 0,
+                cd : 0,
+                cr : 0,
+            }]
+            }, {
+            id: 03,
+            jo: "de",
+            st: [{
+                lv : 1,
+                pd : 0,
+                pa : 0.02,
+                md : 0,
+                ma : 0,
+                cd : 0.02,
+                cr : 0
+            },
+            {
+                lv : 2,
+                pd : 0,
+                pa : 0.05,
+                md : 0,
+                ma : 0,
+                cd : 0.05,
+                cr : 0,
+            },
+            {
+                lv : 3,
+                pd : 0,
+                pa : 0.01,
+                md : 0,
+                ma : 0,
+                cd : 0.09,
+                cr : 0,
+            },
+            {
+                lv : 4,
+                pd : 0,
+                pa : 0,
+                md : 0,
+                ma : 0,
+                cd : 0,
+                cr : 0,
+            }]
+            },  {
+            id: 04,
+            jo: "ma",
+            st: [{
+                lv : 1,
+                pd : 0.02,
+                pa : 0.02,
+                md : 0,
+                ma : 0,
+                cd : 0,
+                cr : 0
+            },
+            {
+                lv : 2,
+                pa : 0.05,
+                pd : 0.06,
+                md : 0,
+                ma : 0,
+                cd : 0,
+                cr : 0,
+            },
+            {
+                lv : 3,
+                pd : 0,
+                pa : 0,
+                md : 0,
+                ma : 0,
+                cd : 0,
+                cr : 0,
+            },
+            {
+                lv : 4,
+                pd : 0,
+                pa : 0,
+                md : 0,
+                ma : 0,
+                cd : 0,
+                cr : 0,
+            }]
+            }, {
+            id: 05,
+            jo: "pa",
+            st: [{
+                lv : 1,
+                pd : 0.02,
+                pa : 0.02,
+                md : 0,
+                ma : 0,
+                cd : 0,
+                cr : 0
+            },
+            {
+                lv : 2,
+                pa : 0.05,
+                pd : 0.06,
+                md : 0,
+                ma : 0,
+                cd : 0,
+                cr : 0,
+            },
+            {
+                lv : 3,
+                pd : 0,
+                pa : 0,
+                md : 0,
+                ma : 0,
+                cd : 0,
+                cr : 0,
+            },
+            {
+                lv : 4,
+                pd : 0,
+                pa : 0,
+                md : 0,
+                ma : 0,
+                cd : 0,
+                cr : 0,
+            }]
+            }, {
+            id: 06,
+            jo: "cr",
+            st: [{
+                lv : 1,
+                pd : 0.02,
+                pa : 0.02,
+                md : 0,
+                ma : 0,
+                cd : 0,
+                cr : 0
+            },
+            {
+                lv : 2,
+                pa : 0.05,
+                pd : 0.06,
+                md : 0,
+                ma : 0,
+                cd : 0,
+                cr : 0,
+            },
+            {
+                lv : 3,
+                pd : 0,
+                pa : 0,
+                md : 0,
+                ma : 0,
+                cd : 0,
+                cr : 0,
+            },
+            {
+                lv : 4,
+                pd : 0,
+                pa : 0,
+                md : 0,
+                ma : 0,
+                cd : 0,
+                cr : 0,
+            }]
+            },
+        ]
     </script>
 </body>
 </html>
