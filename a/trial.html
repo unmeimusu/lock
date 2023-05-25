@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display Icon</title>
+</head>
+<script>
+    var is = [{
+      id: 31,
+      icon: "./i/Crash_blow.webp"
+    }];
+</script>
+<body>
+  <img id="img" src="" alt="">
+  
+  <script>
+    // Get the img element
+    var imgElement = document.getElementById("img");
+
+    // Set the src attribute of the img element with the icon URL
+    if (is.length > 0) {
+      imgElement.src = is[0].icon;
+    }
+  </script>
+</body>
+</html>
