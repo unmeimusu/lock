@@ -32,16 +32,19 @@
          * ws Wisdom
          * mcr Magical critical rate
          * mpr Mana point recovery
+         * gld Gold cost
+         * an Array number
         */
         var asl = [{
                 id : 31,
                 name : "Crash Blow",
                 icon : "./i/Crash_blow.webp",
-                job : "Fighter",
+                job : ["Fighter"],
                 act : 1,
-                tag : ["Two-Handed","Single"],
+                tag : ["Two-H","Single"],
                 desc : "Lifts Two-handed Weapon and smashes down the target to deal X damage. Requires a Two Handed Weapon. This skill is a Single Target attack.",
                 st : [{
+                    job : 0,
                     lv : 1,
                     mpc : 7,
                     coo : 2.8,
@@ -50,8 +53,10 @@
                     dap : 41,
                     dam : 0,
                     req : 3,
-                    sp : 0
+                    sp : 0,
+                    gld : 0
                 },{
+                    job : 0,
                     lv : 2,
                     mpc : 13,
                     coo : 2.8,
@@ -60,8 +65,10 @@
                     dap : 83,
                     dam : 0,
                     req : 6,
-                    sp : 0
+                    sp : 0,
+                    gld : 0
                 },{
+                    job : 0,
                     lv : 3,
                     mpc : 22,
                     coo : 2.8,
@@ -70,8 +77,10 @@
                     dap : 138,
                     dam : 0,
                     req : 10,
-                    sp : 0
+                    sp : 0,
+                    gld : 0
                 },{
+                    job : 0,
                     lv : 4,
                     mpc : 29,
                     coo : 2.8,
@@ -80,8 +89,10 @@
                     dap : 179,
                     dam : 0,
                     req : 13,
-                    sp : 0
+                    sp : 0,
+                    gld : 0
                 },{
+                    job : 0,
                     lv : 5,
                     mpc : 38,
                     coo : 2.8,
@@ -90,8 +101,10 @@
                     dap : 235,
                     dam : 0,
                     req : 17,
-                    sp : 0
+                    sp : 0,
+                    gld : 0
                 },{
+                    job : 0,
                     lv : 6,
                     mpc : 52,
                     coo : 2.8,
@@ -100,8 +113,10 @@
                     dap : 276,
                     dam : 0,
                     req : 20,
-                    sp : 0
+                    sp : 0,
+                    gld : 0,
                 },{
+                    job : 0,
                     lv : 7,
                     mpc : 63,
                     coo : 2.8,
@@ -110,8 +125,10 @@
                     dap : 331,
                     dam : 0,
                     req : 24,
-                    sp : 0
+                    sp : 0,
+                    gld : 0
                 },{
+                    job : 0,
                     lv : 8,
                     mpc : 71,
                     coo : 2.8,
@@ -120,8 +137,10 @@
                     dap : 373,
                     dam : 0,
                     req : 27,
-                    sp : 0
+                    sp : 0,
+                    gld : 0
                 },{
+                    job : 0,
                     lv : 9,
                     mpc : 81,
                     coo : 2.8,
@@ -130,8 +149,10 @@
                     dap : 428,
                     dam : 0,
                     req : 31,
-                    sp : 0
+                    sp : 0,
+                    gld : 0
                 },{
+                    job : 0,
                     lv : 10,
                     mpc : 89,
                     coo : 2.8,
@@ -140,17 +161,19 @@
                     dap : 469,
                     dam : 0,
                     req : 34,
-                    sp : 0
+                    sp : 0,
+                    gld : 0
                 }]
             },{
                 id : 32,
                 name: "Uppercut",
                 icon : "./i/Uppercut.webp",
-                job : "Fighter",
+                job : ["Fighter", "Guard"],
                 act : 1,
-                tag : ["Two-Handed","Single"],
-                desc : "Attacks enemies with a speedy uppercut.",
+                tag : ["Two-H","Single"],
+                desc : ["Attacks enemies with a speedy uppercut.", " Knocking the target back."],
                 st : [{
+                    job : 0,
                     lv : 1,
                     mpc : 6,
                     coo : 5.4,
@@ -159,17 +182,180 @@
                     dap : 301,
                     dam : 0,
                     req : 3,
-                    sp : 0
+                    sp : 15,
+                    gld : 100
                 },{
+                    job : 0,
                     lv : 2,
                     mpc : 12,
                     coo : 5.4,
                     ran : 0,
                     cas : 0,
-                    dap : 41,
+                    dap : 604,
                     dam : 0,
                     req : 6,
-                    sp : 0
+                    sp : 15,
+                    gld : 440
+                },{
+                    job : 0,
+                    lv : 3,
+                    mpc : 17,
+                    coo : 5.4,
+                    ran : 0,
+                    cas : 0,
+                    dap : 909,
+                    dam : 0,
+                    req : 10,
+                    sp : 15,
+                    gld : 1270
+                }, {
+                    job : 0,
+                    lv : 4,
+                    mpc : 23,
+                    coo : 5.4,
+                    ran : 0,
+                    cas : 0,
+                    dap : 1216,
+                    dam : 0,
+                    req : 13,
+                    sp : 15,
+                    gld : 2330
+                },{
+                    job : 0,
+                    lv : 5,
+                    mpc : 29,
+                    coo : 5.4,
+                    ran : 0,
+                    cas : 0,
+                    dap : 1525,
+                    dam : 0,
+                    req : 17,
+                    sp : 15,
+                    gld : 4140
+                },{
+                    job : 1,
+                    lv : 6,
+                    mpc : 29,
+                    coo : 5.4,
+                    ran : 0,
+                    cas : 0,
+                    dap : 1525,
+                    dam : 0,
+                    req : 17,
+                    sp : 15,
+                    gld : 4140
+                },{
+                    job : 1,
+                    lv : 7,
+                    mpc : 29,
+                    coo : 5.4,
+                    ran : 0,
+                    cas : 0,
+                    dap : 1525,
+                    dam : 0,
+                    req : 17,
+                    sp : 15,
+                    gld : 4140
+                },{
+                    job : 1,
+                    lv : 8,
+                    mpc : 29,
+                    coo : 5.4,
+                    ran : 0,
+                    cas : 0,
+                    dap : 1525,
+                    dam : 0,
+                    req : 17,
+                    sp : 15,
+                    gld : 4140
+                }, {
+                    job : 1,
+                    lv : 9,
+                    mpc : 29,
+                    coo : 5.4,
+                    ran : 0,
+                    cas : 0,
+                    dap : 1525,
+                    dam : 0,
+                    req : 17,
+                    sp : 15,
+                    gld : 4140
+                },{
+                    job : 1,
+                    lv : 10,
+                    mpc : 29,
+                    coo : 5.4,
+                    ran : 0,
+                    cas : 0,
+                    dap : 1525,
+                    dam : 0,
+                    req : 17,
+                    sp : 15,
+                    gld : 4140
+                }]
+            },{
+                id : 34,
+                name: "Windy Slash",
+                icon : "./i/Uppercut.webp",
+                job : "Fighter",
+                act : 1,
+                tag : ["One-H","Single"],
+                desc : ["Attacks enemies with a speedy slash.", " Knocking the target back."],
+                st : [{
+                    lv : 1,
+                    mpc : 6,
+                    coo : 3.5,
+                    ran : 0,
+                    cas : 0,
+                    dap : 301,
+                    dam : 0,
+                    req : 3,
+                    sp : 15,
+                    gld : 100
+                },{
+                    lv : 2,
+                    mpc : 12,
+                    coo : 3.5,
+                    ran : 0,
+                    cas : 0,
+                    dap : 614,
+                    dam : 0,
+                    req : 6,
+                    sp : 15,
+                    gld : 440
+                },{
+                    lv : 3,
+                    mpc : 17,
+                    coo : 3.5,
+                    ran : 0,
+                    cas : 0,
+                    dap : 909,
+                    dam : 0,
+                    req : 10,
+                    sp : 15,
+                    gld : 1270
+                }, {
+                    lv : 4,
+                    mpc : 23,
+                    coo : 3.5,
+                    ran : 0,
+                    cas : 0,
+                    dap : 1216,
+                    dam : 0,
+                    req : 13,
+                    sp : 15,
+                    gld : 2330
+                },{
+                    lv : 5,
+                    mpc : 29,
+                    coo : 3.5,
+                    ran : 0,
+                    cas : 0,
+                    dap : 1525,
+                    dam : 0,
+                    req : 17,
+                    sp : 15,
+                    gld : 4140
                 }]
             }];
         
