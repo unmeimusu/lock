@@ -89,12 +89,11 @@
                 id : 301,
                 name : "Crash Blow",
                 icon : "./i/Crash_blow.webp",
-                job : 0,
                 act : 1,
                 tag : ["Two-H","Single"],
                 desc : "Lifts Two-handed Weapon and smashes down the target to deal {x} damage. Requires a Two Handed Weapon. This skill is a Single Target attack.",
                 st : [{
-                    job : 0,
+                    job : "f0",
                     lv : [1,2,3,4,5,6,7,8,9,10],
                     mpc : [7,13,22,29,38,52,63,71,81,89],
                     coo : 2.8,
@@ -110,12 +109,11 @@
                 id : 302,
                 name: "Uppercut",
                 icon : "./i/Uppercut.webp",
-                job : ["Fighter", "Guard"],
                 act : 1,
                 tag : ["Two-H","Single"],
                 desc : ["Attacks enemies with a speedy uppercut.", " Knocking the target back."],
                 st : [{
-                    job : 0,
+                    job : "f0",
                     lv : [1,2,3,4,5],
                     mpc : [6,12,17,23,29],
                     coo : 5.4,
@@ -127,7 +125,7 @@
                     sp : 15,
                     gld : [100,440,1270,2330,4140]
                 },{
-                    job : 1,
+                    job : "f1",
                     lv : [6,7,8,9,10],
                     mpc : 29,
                     coo : 5.4,
@@ -149,16 +147,28 @@
                 desc : ["Attacks enemies with a speedy slash.", " Knocking the target back."],
                 st : [{
                     job : 0,
-                    lv : [1,2,3,4,5,6,7,8,9,10],
-                    mpc : [6,12,17,23,29,29,29,29,29,29],
+                    lv : [1,2,3,4,5],
+                    mpc : [6,12,17,23,29],
                     coo : 3.5,
                     ran : 0,
                     cas : 0,
-                    dap : [301,614,909,1216,1525,1525,1525,1525,1525,1525],
+                    dap : [301,614,909,1216,1525],
                     dam : 0,
-                    req : [3,6,10,13,17,17,17,17,17,17],
+                    req : [3,6,10,13,17],
                     sp : 15,
-                    gld : [100,440,1270,2330,4140,4140,4140,4140,4140,4140]
+                    gld : [100,440,1270,2330,4140]
+                },{
+                    job : 1,
+                    lv : [6,7,8,9,10],
+                    mpc : 29,
+                    coo : 3.5,
+                    ran : 0,
+                    cas : 0,
+                    dap : 1525,
+                    dam : 0,
+                    req : 17,
+                    sp : 15,
+                    gld : 4140
                 }]
             },{
                 id : 304,
