@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Print Array of Arrays</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    // Define an array of arrays with multiple values
+    var arrayOfArrays = [
+      [1, 2, 3],
+      ['a', 'b', 'c'],
+      [true, false, true]
+    ];
+
+    // Get the output element
+    var outputElement = document.getElementById('output');
+
+    // Iterate over the array of arrays
+    for (var i = 0; i < arrayOfArrays.length; i++) {
+      // Get the current inner array
+      var innerArray = arrayOfArrays[i];
+
+      // Create a new paragraph element to display the inner array
+      var paragraph = document.createElement('p');
+
+      // Set the text content of the paragraph to the string representation of the inner array
+      paragraph.textContent = innerArray.toString();
+
+      // Append the paragraph to the output element
+      outputElement.appendChild(paragraph);
+    }
+  </script>
+</body>
+</html>
