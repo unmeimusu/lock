@@ -18,7 +18,7 @@
          * dam Magical damage
          * req Level requirement
          * sp Skill point consumtion
-         * act Action - Active skill if true (1) & passive Skill if false (0)
+         * act Action - Toggled skill if (2), Active skill if true (1), passive Skill if false (0) 
          * pd Physical defense
          * pa Physical attack
          * md Magical defense
@@ -35,6 +35,8 @@
          * gld Gold cost
          * thr Threat
          * dur Duration in seconds
+         * hps HP per second
+         * mps MP per second
         */
         var jl = {
             f0 : "Fighter",
@@ -974,28 +976,119 @@
                     sp : [1,1,2,2,3,4,4,5,5,6],
                     gld : [300,1400,2800,4000,5300,8000,10100,10100,10100,10100],
                     as : [0.01,0.0217,0.0334,0.0452,0.0569,0.0668,0.0803,0.092,0.1038,0.1155]
-                }]
-            },{
-                id : 317,
-                name : "Sword Rapidity",
-                icon : "./i/Sword_Rapidity.webp",
-                act : 0,
-                tag : ["Sword"],
-                desc : "Increase melee attacking speed by {x}%",
-                st : [{
-                    job : "f0",
-                    lv : [1,2,3,4,5,6,7,8,9,10],
+                },{
+                    job : "f1",
+                    lv : [11,12,13,14,15],
                     mpc : 0,
-                    coo : 1.7,
+                    coo : 0,
                     ran : 0,
                     cas : 0,
                     dap : 0,
                     dam : 0,
                     req : 1,
-                    sp : [1,1,2,2,3,4,4,5,5,6],
-                    gld : [300,1400,2800,4000,5300,8000,10100,10100,10100,10100],
-                    as : [0.01,0.0217,0.0334,0.0452,0.0569,0.0668,0.0803,0.092,0.1038,0.1155]
-                }],
+                    sp : [6,6,7,7,8],
+                    gld : [32100,36900,42200,47900,54000],
+                    as : [0.1272,0.139,0.1507,0.1624,0.1741]
+                },{
+                    job : "f2",
+                    lv : [11,12,13,14,15],
+                    mpc : 0,
+                    coo : 0,
+                    ran : 0,
+                    cas : 0,
+                    dap : 0,
+                    dam : 0,
+                    req : 1,
+                    sp : [6,6,7,7,8],
+                    gld : [32100,36900,42200,47900,54000],
+                    as : [0.1272,0.139,0.1507,0.1624,0.1741]
+                }]
+            },{
+                id : 317,
+                name : "Axe Mortality",
+                icon : "./i/Sword_Rapidity.webp",
+                act : 0,
+                tag : "Axe",
+                desc : "Critical power increased by {x}%",
+                st : [{
+                    job : "f0",
+                    lv : [1,2,3,4,5],
+                    mpc : 0,
+                    coo : 0,
+                    ran : 0,
+                    cas : 0,
+                    dap : 0,
+                    dam : 0,
+                    req : 1,
+                    sp : [1,1,2,2,3],
+                    gld : [300,1400,2800,4000,5300],
+                    cd : [0.005,0.01,0.015,0.02,0.025]
+                }]
+            },{
+                id : 318,
+                name : "Mace Protection",
+                icon : "./i/Mace_Protection.webp",
+                act : 0,
+                tag : "Mace",
+                desc : "Increase physical defense by {x}%",
+                st : [{
+                    job : "f0",
+                    lv : [1,2,3,4,5],
+                    mpc : 0,
+                    coo : 0,
+                    ran : 0,
+                    cas : 0,
+                    dap : 0,
+                    dam : 0,
+                    req : 1,
+                    sp : [1,1,2,2,3],
+                    gld : [300,1400,2800,4000,5300],
+                    cd : [0.005,0.01,0.015,0.02,0.025]
+                }]
+            },{
+                id : 319,
+                name : "Burning Rage",
+                icon : "./i/Burning_Rage.webp",
+                act : 1,
+                tag : "Toggle",
+                desc : "Increase physical defense by {x}%",
+                st : [{
+                    job : "f0",
+                    lv : 1,
+                    mpc : 0,
+                    coo : 0,
+                    ran : 0,
+                    cas : 0,
+                    dap : 0,
+                    dam : 0,
+                    req : 1,
+                    sp : 3,
+                    gld : 1000,
+                    hps : 6
+                }]
+            },{
+                id : 320,
+                name : "Nature's Shield",
+                icon : "./i/Nature's_Shield.webp",
+                act : 1,
+                tag : "Toggle",
+                desc : ["Nature protects you, increasing your physical defense.","+{x}% Physical Defense","Drains {y} MP per Second"],
+                st : [{
+                    job : "f0",
+                    lv : [1,2,3],
+                    mpc : 0,
+                    coo : 0,
+                    ran : 0,
+                    cas : 0,
+                    dap : 0,
+                    dam : 0,
+                    req : [1,20,105],
+                    sp : [3,6,9],
+                    gld : 1000,
+                    pd : [0.02,0.05,0.08],
+                    mps : [5,8,11]
+                    
+                }]
             }]
             
         var psl = [
